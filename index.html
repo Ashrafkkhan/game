@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dyslexia Game Hub — Enhanced</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🎓 Dyslexia Game Hub — Enhanced</h1>
+    <p class="subtitle">Five interactive mini-games to train reading, memory & phonology. Progress is saved locally.</p>
+  </header>
+
+  <main class="container">
+    <aside class="left">
+      <div class="card">
+        <h2>Choose a Game</h2>
+        <div class="games-grid">
+          <button class="game-tile" onclick="openGame('builder')">🧩 Word Builder</button>
+          <button class="game-tile" onclick="openGame('match')">🔤 Letter Match</button>
+          <button class="game-tile" onclick="openGame('memory')">🃏 Memory Flip</button>
+          <button class="game-tile" onclick="openGame('sort')">📦 Syllable Sort</button>
+          <button class="game-tile" onclick="openGame('color')">🎨 Read & Color</button>
+        </div>
+        <div style="margin-top:12px;">
+          <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+        </div>
+      </div>
+
+      <div class="card" id="screen-area">
+        <!-- game screens injected here -->
+        <div id="home-screen">
+          <h3>Welcome!</h3>
+          <p>Select a mini-game to practice. Try to earn stars ⭐ for each game.</p>
+        </div>
+      </div>
+    </aside>
+
+    <aside class="right card sidebar">
+      <h3>Your Progress</h3>
+      <div class="stat"><span>Word Builder</span><span id="stat-builder">0⭐</span></div>
+      <div class="stat"><span>Letter Match</span><span id="stat-match">0⭐</span></div>
+      <div class="stat"><span>Memory Flip</span><span id="stat-memory">0⭐</span></div>
+      <div class="stat"><span>Syllable Sort</span><span id="stat-sort">0⭐</span></div>
+      <div class="stat"><span>Read & Color</span><span id="stat-color">0⭐</span></div>
+      <hr>
+      <div class="stat"><strong>Total Stars</strong><strong id="stat-total">0</strong></div>
+    </aside>
+  </main>
+
+
+
+  <!-- scripts: main first -->
+  <script src="js/main.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/match.js"></script>
+  <script src="js/memory.js"></script>
+  <script src="js/sort.js"></script>
+  <script src="js/color.js"></script>
+</body>
+</html>
